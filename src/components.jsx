@@ -56,6 +56,8 @@ function Footer() {
   return <footer>Footer Content</footer>;
 }
 
+
+//JSX
 import React from 'react';
 
 function App() {
@@ -75,3 +77,93 @@ function App() {
 }
 
 export default App;
+
+//Conditional Rendering
+class ConditionalRendering extends React.Component {
+  render() {
+    const isUserLoggedIn = true;
+
+    if (isUserLoggedIn) {
+      return <p>Welcome, User!</p>;
+    } else {
+      return <p>Please log in.</p>;
+    }
+  }
+}
+
+//Ternary Operator
+// (condition ? trueResult : falseResult)
+class ConditionalRendering extends React.Component {
+  render() {
+    const isUserLoggedIn = true;
+
+    return (
+      <div>
+        {isUserLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>}
+      </div>
+    );
+  }
+}
+
+//Logical operators
+class ConditionalRendering extends React.Component {
+  render() {
+    const isUserLoggedIn = true;
+
+    return (
+      <div>
+        {isUserLoggedIn && <p>Welcome, User!</p>}
+      </div>
+    );
+  }
+}
+
+//Conditional Rendering with functions
+class ConditionalRendering extends React.Component {
+  isLoggedIn() {
+    const isUserLoggedIn = true;
+    return isUserLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>;
+  }
+
+  render() {
+    return (
+      <div>
+        {this.isLoggedIn()}
+      </div>
+    );
+  }
+}
+
+//Lists & Keys
+
+import React from 'react';
+
+class TodoList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todos: [
+        { id: 1, text: 'Buy groceries' },
+        { id: 2, text: 'Walk the dog' },
+        { id: 3, text: 'Read a book' },
+      ],
+    };
+  }
+
+  render() {
+    const { todos } = this.state;
+
+    return (
+      <div>
+        <h2>Todo List</h2>
+        <ul>
+          {todos.map((todo) => (
+            <li key={todo.id}>{todo.text}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+}
+
+export default TodoList;
