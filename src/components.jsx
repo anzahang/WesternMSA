@@ -1,6 +1,6 @@
 
 //Functional
-function Introduction(props){
+function Introduction(props) {
   return <h1>Hello,{props.name}</h1>
 }
 
@@ -12,8 +12,8 @@ class Introduction2 extends React.Component {
 }
 
 //Prop
-function App(){
-  return <Introduction name="Andrew"/>;
+function App() {
+  return <Introduction name="Andrew" />;
 }
 
 //Counter
@@ -122,7 +122,7 @@ class ConditionalRendering extends React.Component {
 class ConditionalRendering extends React.Component {
   isLoggedIn() {
     const isUserLoggedIn = true;
-    return isUserLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>;
+    return isUserLoggedIn ? <p>Welcome, User!</p> : <p>Please sign in.</p>;
   }
 
   render() {
